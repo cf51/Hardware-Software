@@ -5,30 +5,41 @@
 // Name: Callum Forsyth
 // User: cf51 
 
-// Structure that stores the PPM Data
-struct PPM{
-    int width, height, maxColour; 
-    char comments[255]; 
-    struct Pixels *pixels; 
-}; 
 
-// Structure that stores the Pixel Data 
+// Structure that stores RGB values  
 struct Pixels{
     int red, green, blue; 
 };  
 
-struct PPM * getPPM(FILE * f){
+// Structure that stores the PPM Data
+struct PPM{
+    char P3[2]; 
+    char comments;
+    int width, height, maxColour; 
+    struct Pixels *pixels; 
+}; 
+
+
+
+struct PPM *getPPM(FILE * f){
 
 }
 
-showPPM(struct PPM * im){
+
+void showPPM(struct PPM * im){
 
 }
+
 
 struct PPM * encode(struct PPM * im, char * message, unsigned int mSize, unsigned int secret){
 
 }
 
-char * decode(struct ppm * im, unsigned int secret){
 
+char * decode(struct PPM * im, unsigned int secret){
+    return 0; 
+}
+
+int main(int argc, char** argv){
+    return 0; 
 }
